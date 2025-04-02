@@ -1,0 +1,59 @@
+main {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-areas:
+    "A C"
+    "B C";
+  column-gap: 6.75rem;
+  row-gap: 0.75rem;
+
+  div {
+    grid-area: A;
+
+    header {
+      width: 90%;
+
+      span {
+        font: var(--overline);
+        background: var(--gradient-content);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+
+  .containerInformations {
+    grid-area: B;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    .boxInformation {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      gap: 0.5rem;
+
+      img {
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+
+      div {
+        h3 {
+          color: var(--content-brand);
+          font: var(--paragraph-medium);
+        }
+        p{
+          color: var(--content-secondary);
+          font: var(--paragraph-small);
+        }
+      }
+    }
+  }
+
+  .containerResult {
+    grid-area: C;
+  }
+}
