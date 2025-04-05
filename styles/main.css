@@ -1,3 +1,5 @@
+@import url(./form.css);
+
 main {
   margin-top: 4rem;
   display: grid;
@@ -7,18 +9,15 @@ main {
   column-gap: 6.75rem;
   row-gap: 0.75rem;
 
-  div {
+  header {
     grid-area: A;
+    width: 90%;
 
-    header {
-      width: 90%;
-
-      span {
-        font: var(--overline);
-        background: var(--gradient-content);
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+    span {
+      font: var(--overline);
+      background: var(--gradient-content);
+      -webkit-background-clip: text;
+      color: transparent;
     }
   }
 
@@ -45,7 +44,7 @@ main {
           color: var(--content-brand);
           font: var(--paragraph-medium);
         }
-        p{
+        p {
           color: var(--content-secondary);
           font: var(--paragraph-small);
         }
@@ -54,6 +53,65 @@ main {
   }
 
   .containerResult {
+    width: 400px;
+    display: flex;
+    align-items: center;
     grid-area: C;
+
+    .game {
+      width: 100%;
+      header {
+        width: 100%;
+        margin-bottom: 2.5rem;
+
+        h2 {
+          text-transform: uppercase;
+        }
+
+        p {
+          color: var(--content-secondary);
+          font: var(--paragraph-large);
+        }
+      }
+    }
+
+    .boxResults {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2.25rem;
+
+      header {
+        width: 100%;
+        margin-bottom: 2.5rem;
+        text-align: center;
+
+        h2 {
+          text-transform: uppercase;
+        }
+
+        span {
+          color: var(--content-secondary);
+        }
+      }
+
+      .results {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.25rem;
+
+        .result {
+          width: 5.25rem;
+          height: 5.25rem;
+          color: var(--content-brand);
+          font: var(--result);
+        }
+      }
+
+      button {
+      }
+    }
   }
 }

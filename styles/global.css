@@ -31,7 +31,7 @@
     #d586e0 65.79%,
     #91a1fa 84.58%
   );
-  --gradient-background: linear-gradient(81deg, #d586e0 0%, #91a1fa 98.93%);
+  --gradient-background: linear-gradient(135deg, #d586e0 0%, #91a1fa 100%);
   --gradient-content: linear-gradient(90deg, #c7c9cc 0%, #3d3d3d 100%);
 
   --ff-sora: "Sora", system-ui, sans-serif;
@@ -43,13 +43,14 @@
   --display-small: 700 2rem/1.3 var(--ff-sora);
 
   --overline: 700 1rem/1.5 var(--ff-roboto-mono);
+  --result: 700 3rem/1.5 var(--ff-roboto-mono);
 
   --paragraph-large: 500 1rem/1.5 var(--ff-roboto-flex);
   --paragraph-medium: 500 0.875rem/1.5 var(--ff-roboto-flex);
   --paragraph-small: 500 0.75rem/1.5 var(--ff-roboto-flex);
-  --label-medium: 700 1.25rem/1.5 var(--ff-roboto-flex);
-  --label-small: 700 1rem/1.5 var(var(--ff-roboto-flex));
-  --label-large: 700 1.25rem/1.5 var(var(--ff-roboto-flex));
+  --label-medium: 700 1rem/1.5 var(--ff-roboto-flex);
+  --label-small: 700 0.85rem/1.5 var(var(--ff-roboto-flex));
+  --label-large: 700 1.25rem/1.5 var(--ff-roboto-flex);
 }
 
 body {
@@ -87,4 +88,20 @@ h1 {
 
 h2 {
   font: var(--label-large);
+}
+
+label {
+  font: var(--label-medium);
+}
+
+button {
+  font: var(--label-medium);
+}
+
+input[type="text"] {
+  font: var(--display-small);
+}
+
+fieldset {
+  border: none;
 }

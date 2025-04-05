@@ -23,26 +23,24 @@
         <span>NUMBERS</span>
       </nav>
       <main>
-        <div>
-          <header>
-            <span>ONLINE - GRATUITO</span>
-            <h1>SORTEADOR DE NÚMEROS</h1>
-          </header>
-        </div>
+        <header>
+          <span>ONLINE - GRATUITO</span>
+          <h1>SORTEADOR DE NÚMEROS</h1>
+        </header>
 
         <section class="containerResult">
-          <div>
+          <div class="game">
             <header>
               <h2>Quero sortear:</h2>
               <p>
-                defina o intervalo e a quantidade de números, clique em
+                Defina o intervalo e a quantidade de números, clique em
                 "Sortear" e veja os resultados na tela. É rápido e fácil!
               </p>
             </header>
 
             <div>
               <form>
-                <fieldset>
+                <fieldset class="numbers">
                   <section>
                     <label for="qtdnumbers">NÚMEROS</label>
                     <input type="text" id="qtdnumbers" name="qtdnumbers" />
@@ -54,65 +52,56 @@
                   </section>
 
                   <section>
-                    <label for="finalyNumber">NÚMEROS</label>
+                    <label for="finalyNumber">ATÉ</label>
                     <input type="text" id="finalyNumber" name="finalyNumber" />
                   </section>
                 </fieldset>
 
-                <fieldset>
-                  <div>
-                    <div>
-                      <label>Não repetir números</label>
+                <fieldset class="repeat">
+                  <div class="containerToggle">
+                    <label>Não repetir números</label>
+
+                    <div class="boxToggle">
+                      <div class="toggle"></div>
 
                       <div>
-                        <div>
-                          <input
-                            type="radio"
-                            name="type"
-                            id="yes"
-                            value="yes"
-                            checked
-                          />
-                        </div>
-
-                        <div>
-                          <input
-                            type="radio"
-                            name="type"
-                            id="not"
-                            value="not"
-                          />
-                        </div>
+                        <input
+                          type="radio"
+                          name="type"
+                          id="yes"
+                          value="yes"
+                          checked
+                        />
+                        <input type="radio" name="type" id="not" value="not" />
                       </div>
                     </div>
                   </div>
-
-                  <button>
-                    <span>SORTEAR</span>
-                    <img src="" alt="" />
-                  </button>
                 </fieldset>
+
+                <button>
+                  <span>SORTEAR</span>
+                  <img src="./assets/arraw.svg" alt="" />
+                </button>
               </form>
             </div>
           </div>
 
-          <div>
+          <!-- <div class="boxResults">
             <header>
               <h2>RESULTADO DO SORTEIO</h2>
               <span>1° RESULTADO</span>
             </header>
-            <div>
-              <div>
-                <span>23</span>
-                <span>12</span>
-              </div>
 
-              <button>
-                <span>SORTEAR NOVAMENTE</span>
-                <img src="" alt="" />
-              </button>
+            <div class="results">
+              <span class="result">23</span>
+              <span class="result">12</span>
             </div>
-          </div>
+
+            <button type="submit">
+              <span>SORTEAR NOVAMENTE</span>
+              <img src="./assets/play_sort.svg" alt="" />
+            </button>
+          </div> -->
         </section>
 
         <section class="containerInformations">
