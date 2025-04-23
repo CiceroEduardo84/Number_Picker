@@ -43,17 +43,32 @@
                 <fieldset class="numbers">
                   <section>
                     <label for="qtdnumbers">NÚMEROS</label>
-                    <input type="text" id="qtdnumbers" name="qtdnumbers" />
+                    <input
+                      type="text"
+                      id="qtdnumbers"
+                      name="qtdnumbers"
+                      required
+                    />
                   </section>
 
                   <section>
                     <label for="initNumber">DE</label>
-                    <input type="text" id="initNumber" name="initNumber" />
+                    <input
+                      type="text"
+                      id="initNumber"
+                      name="initNumber"
+                      required
+                    />
                   </section>
 
                   <section>
-                    <label for="finalyNumber">ATÉ</label>
-                    <input type="text" id="finalyNumber" name="finalyNumber" />
+                    <label for="finaleNumber">ATÉ</label>
+                    <input
+                      type="text"
+                      id="finaleNumber"
+                      name="finalyNumber"
+                      required
+                    />
                   </section>
                 </fieldset>
 
@@ -66,42 +81,24 @@
 
                       <div>
                         <input
-                          type="radio"
-                          name="type"
-                          id="yes"
-                          value="yes"
+                          type="checkbox"
+                          name="repeatNumber"
+                          id="repeat"
+                          value="not"
                           checked
                         />
-                        <input type="radio" name="type" id="not" value="not" />
                       </div>
                     </div>
                   </div>
                 </fieldset>
 
-                <button>
+                <button id="buttonInit">
                   <span>SORTEAR</span>
                   <img src="./assets/arraw.svg" alt="" />
                 </button>
               </form>
             </div>
           </div>
-
-          <!-- <div class="boxResults">
-            <header>
-              <h2>RESULTADO DO SORTEIO</h2>
-              <span>1° RESULTADO</span>
-            </header>
-
-            <div class="results">
-              <span class="result">23</span>
-              <span class="result">12</span>
-            </div>
-
-            <button type="submit">
-              <span>SORTEAR NOVAMENTE</span>
-              <img src="./assets/play_sort.svg" alt="" />
-            </button>
-          </div> -->
         </section>
 
         <section class="containerInformations">

@@ -107,11 +107,10 @@ main {
           height: 5.25rem;
           color: var(--content-brand);
           font: var(--result);
+          text-align: center;
         }
-      }
-
-      button {
       }
     }
   }
 }
+
