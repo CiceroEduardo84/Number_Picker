@@ -1,4 +1,5 @@
 input[type="text"] {
+  position: relative;
   width: 100%;
   height: 100%;
   margin-top: 0.5rem;
@@ -7,6 +8,7 @@ input[type="text"] {
   border-radius: 10px;
   border: none;
   text-align: center;
+  z-index: 1;
 }
 
 input[type="checkbox"] {
@@ -38,7 +40,7 @@ button {
   align-items: center;
   width: 2.25rem;
   height: 1.25rem;
-  background: var(--gradient-background);
+  background: var(--content-tertiary);
   border-radius: 10px;
   padding: 3px;
 
@@ -48,6 +50,10 @@ button {
     border-radius: 10px;
     background: var(--content-primary);
   }
+}
+
+.boxToggle:has(#repeat:checked) {
+  background: var(--gradient-background);
 }
 
 form {

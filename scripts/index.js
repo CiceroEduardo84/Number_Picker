@@ -19,9 +19,11 @@ boxToggle.addEventListener("click", () => {
     if (radio.value === "not") {
       boxToggle.style.justifyContent = "end";
       radio.value = "yes";
+      radio.checked = true;
     } else if (radio.value === "yes") {
       boxToggle.style.justifyContent = "start";
       radio.value = "not";
+      radio.checked = false;
     }
   });
 });
@@ -29,19 +31,21 @@ boxToggle.addEventListener("click", () => {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const repeatNumber = document.querySelector(
-    "input[name=repeatNumber]:checked"
-  );
+  const repeatNumber = document.querySelector("input[name=repeatNumber]");
 
   repeat = String(repeatNumber.value);
   total = numbersTotal.value;
   min = numberInitial.value;
   max = numberFinale.value;
 
-  if (!total || !min || !max) {
+  if (!total || total <= 0 || !min || !max) {
     alert("Digite os valores!");
   } else if (isNaN(total) || isNaN(min) || isNaN(max)) {
     alert("Somente números!");
+  } else if ((total > max) & (repeat === "yes")) {
+    alert(
+      "O total de números não pode ser menor que o máximo quando não se pode repetir números!"
+    );
   } else {
     total = Number(total);
     min = Number(min);
