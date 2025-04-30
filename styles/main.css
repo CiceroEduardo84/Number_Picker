@@ -108,9 +108,26 @@ main {
           color: var(--content-brand);
           font: var(--result);
           text-align: center;
+          border-radius: 1rem;
+          animation: role 2s ease-in-out forwards;;
         }
       }
     }
   }
 }
 
+@keyframes role {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+    background: var(--content-brand);
+    color: var(--color-inverse);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+    background: transparent;
+    color: var(--content-brand);
+  }
+}

@@ -83,6 +83,8 @@ function createContainerResult() {
   const descButton = document.createElement("span");
   const img = document.createElement("img");
 
+  let time = 0;
+
   h2.textContent = "RESULTADO DO SORTEIO";
   span.textContent = `${totalResults}° RESULTADO`;
   header.append(h2, span);
@@ -95,7 +97,11 @@ function createContainerResult() {
     spanResult.setAttribute("class", "result");
     spanResult.textContent = numbers[x];
 
-    results.append(spanResult);
+    setTimeout(() => {
+      results.append(spanResult);
+    }, time);
+
+    time += 3000;
   }
 
   descButton.textContent = "SORTEAR NOVAMENTE";
