@@ -1,20 +1,4 @@
-const form = document.querySelector("form");
-const buttonInit = document.getElementById("buttonInit");
-const numbersTotal = document.getElementById("qtdnumbers");
-const numberInitial = document.getElementById("initNumber");
-const numberFinale = document.getElementById("finaleNumber");
-const containerResult = document.querySelector(".containerResult");
-const boxToggle = document.querySelector(".boxToggle");
-const radioRepeat = document.getElementsByName("repeatNumber");
-
-let numbers = [];
-let totalResults = 0;
-let repeat;
-let total;
-let min;
-let max;
-
-boxToggle.addEventListener("click", () => {
+function toggleButton() {
   radioRepeat.forEach((radio) => {
     if (radio.value === "not") {
       boxToggle.style.justifyContent = "end";
@@ -26,9 +10,9 @@ boxToggle.addEventListener("click", () => {
       radio.checked = false;
     }
   });
-});
+}
 
-form.addEventListener("submit", (event) => {
+function handleSubmit(event) {
   event.preventDefault();
 
   const repeatNumber = document.querySelector("input[name=repeatNumber]");
@@ -54,7 +38,7 @@ form.addEventListener("submit", (event) => {
     createNumbers({ total, min, max, repeat });
     createContainerResult();
   }
-});
+}
 
 function createNumbers({ total, min, max, repeat }) {
   numbers = [];
@@ -125,3 +109,22 @@ function createContainerResult() {
 function sortNumber({ min, max }) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+const form = document.querySelector("form");
+const buttonInit = document.getElementById("buttonInit");
+const numbersTotal = document.getElementById("qtdnumbers");
+const numberInitial = document.getElementById("initNumber");
+const numberFinale = document.getElementById("finaleNumber");
+const containerResult = document.querySelector(".containerResult");
+const boxToggle = document.querySelector(".boxToggle");
+const radioRepeat = document.getElementsByName("repeatNumber");
+
+let numbers = [];
+let totalResults = 0;
+let repeat;
+let total;
+let min;
+let max;
+
+form.addEventListener("submit", handleSubmit);
+boxToggle.addEventListener("click", toggleButton);
