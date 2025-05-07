@@ -97,6 +97,7 @@ main {
       }
 
       .results {
+        height: 5.25rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -109,7 +110,7 @@ main {
           font: var(--result);
           text-align: center;
           border-radius: 1rem;
-          animation: role 2s ease-in-out forwards;;
+          animation: role 2s ease-in-out forwards;
         }
       }
     }
@@ -123,11 +124,49 @@ main {
     background: var(--content-brand);
     color: var(--color-inverse);
   }
-  
+
   100% {
     transform: rotate(360deg);
     opacity: 1;
     background: transparent;
     color: var(--content-brand);
+  }
+}
+
+@media (max-width: 80em) {
+  main {
+    grid-template-areas:
+      "A"
+      "C"
+      "B";
+
+    header {
+      width: 100%;
+    }
+
+    .containerInformations {
+      width: auto;
+      margin-top: 5rem;
+      gap: 2.25rem;
+    }
+
+    .containerResult {
+      width: 100%;
+      margin-top: 2.625rem;
+
+      .game {
+        height: 100%;
+
+        header {
+          p {
+            font: var(--paragraph-medium);
+          }
+        }
+      }
+
+      .boxResults {
+        width: 100%;
+      }
+    }
   }
 }
