@@ -11,10 +11,8 @@
 ## Technologies
 
 - `Javascript`
-- `Node.js`
-- `Routes`
-- `Middlewares`
-- `Controllers`
+- `HTML`
+- `CSS`
 
 ## Installation
 
